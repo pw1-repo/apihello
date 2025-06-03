@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = 8000
+app.set('json spaces', 4);
 
 app.listen(PORT, ()=> {
     const msg = `Hello API running on PORT ${PORT}`
@@ -18,7 +19,7 @@ app.get('/v1/hi', function(req, res) {
 
 app.get('/v1/hi/user/:name', function(req, res) {
     const out = {
-        msg: "Hello, " + req.params.name
+        msg: "Hello, " + req.params.name.toUpperCase()
     }
     res.json(out)
 })
