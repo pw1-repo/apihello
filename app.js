@@ -6,8 +6,8 @@ app.set('json spaces', 4);
 app.listen(PORT, ()=> {
     const msg = `Hello API running on PORT ${PORT}`
     const link = `http://localhost:${PORT}`
-    const conf = `\x1b[1m${link}\x1b[0m`
-    console.log(msg + '\n' + conf)
+    const flink = `\x1b[1m${link}\x1b[0m`
+    console.log(msg + '\n' + flink)
 })
 
 app.get('/v1/hi', function(req, res) {
