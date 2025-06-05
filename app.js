@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const PORT = 8000
 app.set('json spaces', 4);
+app.use(express.urlencoded({ extended: true }));
 
 app.listen(PORT, ()=> {
     const msg = `Hello API running on PORT ${PORT}`
@@ -30,3 +31,16 @@ app.get('*', function(req, res) {
     }
     res.json(err)
 })
+
+app.post('/v1/hi', (req, res) => {
+    const { name } = req.body;
+
+    if (!name) {
+        return res.status(400).json({ error: "Name is required" });
+    }
+
+    const out = {
+        msg: `Hello, ${name.toUpperCase()} from POST!`,
+    };
+    res.json(out);
+});
