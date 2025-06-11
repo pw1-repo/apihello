@@ -26,7 +26,6 @@ app.get('/v1/hi/user/:name', function(req, res) {
 })
 
 app.post('/v1/hi', (req, res) => {
-    console.log(req.body)
     const { name } = req.body;
 
     if (!name) {
@@ -38,7 +37,7 @@ app.post('/v1/hi', (req, res) => {
     };
     res.status(200).json(out);
 });
-// express v4 use '/*''
+// express v4 use '/*'
 // express v5 use '/*splat'
 app.get('/*splat', function(req, res) {
     const err = {
