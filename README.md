@@ -1,10 +1,10 @@
 # apihello
 
-- Código fonte utilizado na Aula 11 da disciplina Programação Web 1
+- Código fonte utilizado na Aula 12 da disciplina Programação Web 1
 
 ## Objetivo
 
-- Utilizar como exemplo de primeira implementação de uma API
+- Utilizar o código fonte como exemplo de primeira implementação de API
 
 ## Instruções
 
